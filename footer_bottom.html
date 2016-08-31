@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>code in option</title>
+<!-- Latest compiled and minified CSS -->
+<style>
+body {
+	padding: 0px;
+	margin: 0px;
+}
+.header,.content,.footer {
+padding: 15px;
+text-align: center;
+color: #fff;
+}
+.header,.content {
+margin-bottom:15px;
+}
+.header {background: #000;}
+.content {background: #6f6f6f;font-size: 20px;}
+.footer {
+background: #000;
+	margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div id="header" class="header container-fluid"><p>Header</p></div>
+<div id="content" class="content container-fluid">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. enim.</div>
+<div class="footer container-fluid">footer</div>
+
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- footer js start -->
+<script>
+    jQuery(document).ready(function() {
+     var contentHeight = jQuery(window).height();
+     var footerHeight = jQuery('.footer').height();
+     var footerTop = jQuery('.footer').position().top + footerHeight;
+     if (footerTop < contentHeight) {
+         jQuery('.footer').css('margin-top', 10+ (contentHeight - footerTop) + 'px');
+       }
+     });
+</script>
+<!-- footer js end -->
+</body>
+</html>
